@@ -25,7 +25,7 @@
 | usage | string | 使用用途 |
 | foot_type | string | 足の形 |
 | company | string | メーカー |
-| price | int | 価格 |
+| price | integer | 価格 |
 | cushion | string | クッション性 |
 | fashion | string | 服装 |
 | image | string | 画像 |

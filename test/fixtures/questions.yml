@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usage: MyString
+  foot_type: MyString
+  company: MyString
+  price: 
+  cushion: MyString
+  fashion: MyString
+  image: MyString
+
+two:
+  usage: MyString
+  foot_type: MyString
+  company: MyString
+  price: 
+  cushion: MyString
+  fashion: MyString
+  image: MyString
