@@ -1,4 +1,8 @@
 class QuestionsController < ApplicationController
-  def new
+  def index
+  end
+
+  def get_shoes
+    
   end
 end
