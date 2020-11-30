@@ -1,9 +1,30 @@
-<%= form_with model: @question do |f| %>
-    <%= f.select :usage, [["カジュアル", "カジュアル"], ["スポーツ", "スポーツ"], ["ビジネス", "ビジネス"], ["サンダル","サンダル"]], include_blank: "スタイルを選択して下さい" %>
-    <%= f.select :foot_type, [["甲高、幅広", "甲高、幅広"]], include_blank: "足の形を選択して下さい" %>
-    <%= f.select :company, [["adidas", "adidas"], ["NIKE", "NIKE"], ["CONVERSE", "CONVERSE"], ["New Balance", "New Balance"], ["PUMA", "PUMA"], ["Reebok", "Reebok"], ["asics", "asics"], ["Soucany", "Soucany"],["HAWKINS", "HAWKINS"], ["GIANCARLO MORELLI", "GIANCARLO MORELLI"], ["STEFANO ROSSI", "STEFANO ROSSI"]], include_blank: "ブランドを選択して下さい" %>
-    <%= f.select :price, [5000, 10000], include_blank: "円以下で選択して下さい"%>
-    <%= f.select :cushion, ["重視", "あり"], include_blank: "特にクッション性重視か選択して下さい"%>
-    <%= f.select :fashion, ["ホワイト", "ホワイト"],["ブラック", "ブラック"], ["ネイビー", "ネイビー"], ["グレー", "グレー"], ["ベージュ", "ベージュ"], ["レッド", "レッド"], ["ブルー", "ブルー"], ["イエロー", "イエロー"], ["グリーン", "グリーン"], ["ピンク", "ピンク"]%> 
-    <%= f.submit '送信'%>
-<% end %>
+<div class = "container">
+    <h5>お求めの靴に関して、重要視するものに回答して下さい👟</h5>
+    <%= form_with model: @question do |f| %>
+        <div class="form_group">
+            <p>スタイル</p>
+            <%= f.select :usage, [["カジュアル", "カジュアル"], ["スポーツ", "スポーツ"], ["ビジネス", "ビジネス"], ["サンダル","サンダル"]], include_blank: "選択して下さい", class: 'form-control' %>
+        </div>
+        <div class="form_group">
+            <p>足の形</p>
+            <%= f.select :foot_type, [["甲高、幅広", "甲高、幅広"]], include_blank: "選択して下さい" %>      
+        </div>
+        <div class="form_group">
+            <p>ブランド</p>
+            <%= f.select :company, [["adidas", "adidas"], ["NIKE", "NIKE"], ["CONVERSE", "CONVERSE"], ["New Balance", "New Balance"], ["PUMA", "PUMA"], ["Reebok", "Reebok"], ["asics", "asics"], ["Soucany", "Soucany"],["HAWKINS", "HAWKINS"], ["GIANCARLO MORELLI", "GIANCARLO MORELLI"], ["STEFANO ROSSI", "STEFANO ROSSI"]], include_blank: "選択して下さい" %>
+        </div>
+        <div class="form_group">
+            <p>価格</p>
+            <%= f.select :price, [[5000, 5000],[10000, 10000]], include_blank: "選択して下さい"%>
+        </div>
+        <div class="form_group">
+            <p>クッション性</p>
+            <%= f.select :cushion, [["重視", "あり"]], include_blank: "選択して下さい"%>
+        </div>
+        <div class="form_group">
+            <p>カラー</p>
+            <%= f.select :fashion, [["ホワイト", "ホワイト"],["ブラック", "ブラック"], ["ネイビー", "ネイビー"], ["グレー", "グレー"], ["ベージュ", "ベージュ"], ["レッド", "レッド"], ["ブルー", "ブルー"], ["イエロー", "イエロー"], ["グリーン", "グリーン"], ["ピンク", "ピンク"], ["バーガンディ", "バーガンディ"], ["パープル", "パープル"], ["カーキ", "カーキ"], ["ブラウン", "ブラウン"]], include_blank: "選択して下さい" %> 
+        </div>
+        <%= f.submit '送信', class: 'btn btn-primary' %>
+    <% end %>
+</div>
