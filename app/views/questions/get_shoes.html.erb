@@ -3,7 +3,7 @@
     <%= form_with model: @question do |f| %>
         <div class="form_group">
             <p>スタイル</p>
-            <%= f.select :usage, [["カジュアル", "カジュアル"], ["スポーツ", "スポーツ"], ["ビジネス", "ビジネス"], ["サンダル","サンダル"]], include_blank: "選択して下さい", class: 'form-control' %>
+            <%= f.select :usage, [["カジュアル", "カジュアル"], ["スポーツ", "スポーツ"], ["ビジネス", "ビジネス"], ["サンダル","サンダル"], ["レディース", "レディース"],["キッズ", "キッズ"]], include_blank: "選択して下さい", class: 'form-control' %>
         </div>
         <div class="form_group">
             <p>足の形</p>
