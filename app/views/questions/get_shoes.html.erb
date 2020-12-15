@@ -1,8 +1,8 @@
 <div class = "container">
-    <h5>お求めの靴に関して、重要視するものに回答して下さい👟</h5>
-    <%= form_with model: @question do |f| %>
+    <h5>お探しの靴に関して、スタイルと重要視する項目に回答して下さい👟(複数回答可)</h5>
+    <%= form_with url: questions_get_shoes_path do |f| %>
         <div class="form_group">
-            <p>スタイル</p>
+            <p>スタイル ※必須</p>
             <%= f.select :usage, [["カジュアル", "カジュアル"], ["スポーツ", "スポーツ"], ["ビジネス", "ビジネス"], ["サンダル","サンダル"], ["レディース", "レディース"],["キッズ", "キッズ"]], include_blank: "選択して下さい", class: 'form-control' %>
         </div>
         <div class="form_group">
@@ -11,20 +11,26 @@
         </div>
         <div class="form_group">
             <p>ブランド</p>
-            <%= f.select :company, [["adidas", "adidas"], ["NIKE", "NIKE"], ["CONVERSE", "CONVERSE"], ["New Balance", "New Balance"], ["PUMA", "PUMA"], ["Reebok", "Reebok"], ["asics", "asics"], ["Soucany", "Soucany"],["HAWKINS", "HAWKINS"], ["GIANCARLO MORELLI", "GIANCARLO MORELLI"], ["STEFANO ROSSI", "STEFANO ROSSI"]], include_blank: "選択して下さい" %>
+            <%= f.select :company, [["VANS", "VANS"], ["adidas", "adidas"], ["NIKE", "NIKE"], ["CONVERSE", "CONVERSE"], ["New Balance", "New Balance"], ["PUMA", "PUMA"], ["Reebok", "Reebok"], ["asics", "asics"], ["Soucany", "Soucany"],["HAWKINS", "HAWKINS"], ["GIANCARLO MORELLI", "GIANCARLO MORELLI"], ["STEFANO ROSSI", "STEFANO ROSSI"]], include_blank: "選択して下さい" %>
         </div>
         <div class="form_group">
             <p>価格</p>
-            <%= f.select :price, [[5000, 5000],[10000, 10000]], include_blank: "選択して下さい"%>
+            <%= f.select :price, [[5000, 5000],[10000, 10000]], include_blank: "円以下で選択して下さい" %>
         </div>
         <div class="form_group">
             <p>クッション性</p>
-            <%= f.select :cushion, [["重視", "あり"]], include_blank: "選択して下さい"%>
+            <%= f.select :cushion, [["重視", "あり"]], include_blank: "選択して下さい" %>
         </div>
         <div class="form_group">
             <p>カラー</p>
             <%= f.select :fashion, [["ホワイト", "ホワイト"],["ブラック", "ブラック"], ["ネイビー", "ネイビー"], ["グレー", "グレー"], ["ベージュ", "ベージュ"], ["レッド", "レッド"], ["ブルー", "ブルー"], ["イエロー", "イエロー"], ["グリーン", "グリーン"], ["ピンク", "ピンク"], ["バーガンディ", "バーガンディ"], ["パープル", "パープル"], ["カーキ", "カーキ"], ["ブラウン", "ブラウン"]], include_blank: "選択して下さい" %> 
         </div>
-        <%= f.submit '送信', class: 'btn btn-primary' %>
+        <br>
+        <%= f.submit '送信', class: 'btn btn-outline-primary' %>
     <% end %>
+
+    <p class="button-home"><%= link_to 'ホーム', root_path, class: "btn btn-outline-primary" %></p>
+
+
+
 </div>
