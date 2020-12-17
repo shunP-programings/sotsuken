@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Question.create!(
+    usage:'カジュアル',
+    foot_type:'ノーマル',
+    company:'VANS',
+    price:7700,
+    cushion:'ノーマル',
+    fashion:'ブラック',
+    image:'VANS1.jpeg'
+)

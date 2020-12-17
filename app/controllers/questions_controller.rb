@@ -4,29 +4,30 @@ class QuestionsController < ApplicationController
 
   def get_shoes
     @question = Question.new(question_params)
-    q = 'select image from Questions where usage'
+    #@question = Question.find(params[:usage])
+    # q = "select image from questions where usage = #{@Question.usage}"
 
-    if @question.foot_type != "" 
-      q + 'and foot_type = #{Question.foot_type}'
-    end
+    # if @question.foot_type != "" 
+    #   q + "and foot_type = #{@Question.foot_type}"
+    # end
 
-    if @question.company != "" 
-      q + 'and company = #{Question.company}'
-    end
+    # if @question.company != "" 
+    #   q + "and company = #{@Question.company}"
+    # end
 
-    if @question.price != "" 
-      q + 'and price = #{Question.price}'
-    end
+    # if @question.price != "" 
+    #   q + "and price = #{@Question.price}"
+    # end
 
-    if @question.cushion != "" 
-      q + 'and cushion = #{Question.cushion}'
-    end
+    # if @question.cushion != "" 
+    #   q + "and cushion = #{@Question.cushion}"
+    # end
 
-    if @question.fashion != "" 
-      q + 'and fashion = #{Question.fashion}'
-    end
+    # if @question.fashion != "" 
+    #   q + "and fashion = #{@Question.fashion}"
+    # end
 
-    ActiveRecord::Base.connection.select_all(q)
+    # ActiveRecord::Base.connection.select_all(q)
 
   end
 

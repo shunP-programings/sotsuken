@@ -1,6 +1,6 @@
 <div class = "container">
     <h5>お探しの靴に関して、スタイルと重要視する項目に回答して下さい👟(複数回答可)</h5>
-    <%= form_with url: questions_get_shoes_path do |f| %>
+    <%= form_with url:questions_get_shoes_path do |f| %>
         <div class="form_group">
             <p>スタイル ※必須</p>
             <%= f.select :usage, [["カジュアル", "カジュアル"], ["スポーツ", "スポーツ"], ["ビジネス", "ビジネス"], ["サンダル","サンダル"], ["レディース", "レディース"],["キッズ", "キッズ"]], include_blank: "選択して下さい", class: 'form-control' %>
@@ -28,6 +28,7 @@
         <br>
         <%= f.submit '送信', class: 'btn btn-outline-primary' %>
     <% end %>
+
 
     <p class="button-home"><%= link_to 'ホーム', root_path, class: "btn btn-outline-primary" %></p>
 
