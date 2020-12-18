@@ -28,8 +28,13 @@
         <br>
         <%= f.submit '送信', class: 'btn btn-outline-primary' %>
     <% end %>
-
-
+    <div class="serched image">
+        <ul>
+            <% @question.each do |question| %>
+                <li><%= question %></li>
+            <% end %>
+        </ul>
+    </div>
     <p class="button-home"><%= link_to 'ホーム', root_path, class: "btn btn-outline-primary" %></p>
 
 
